@@ -1,0 +1,28 @@
+<section class="vh-100 gradient-custom " >
+  <div class="container py-5 ">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration , bg-dark text-white" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <form>
+<div class="field">
+      <div class="row">
+        <div class="col-md-10  , actions ">
+<h1>Dr. <%= @doctor.name %></h1>
+<h1>Specializations <%= @doctor.specializations%></h1>
+
+<div class="text-warning">
+<p><%= link_to  "Book with #{@doctor.name}", new_doctor_appointment_path(@doctor) , :class => "text-warning"  %></p>
+<p><%= link_to  "#{@doctor.name}'s appointments", doctor_appointments_path(@doctor) , :class => "text-warning"  %></p>
+</div>
+</div>
+</div>
+</div>
+
+ </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

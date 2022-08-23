@@ -1,0 +1,6 @@
+<div class="p-3 mb-2 bg-secondary text-white">Patients List</div>
+
+<%= link_to 'Add Patient', new_patient_path , :class => 'btn btn-primary'%>
+<% @patients.each do |patient| %>
+  <p><%= link_to patient.name, patient_path(patient) %></p>
+<% end %>

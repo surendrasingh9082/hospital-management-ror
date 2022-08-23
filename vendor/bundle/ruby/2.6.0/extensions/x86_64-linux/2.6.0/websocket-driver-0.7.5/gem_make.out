@@ -1,0 +1,15 @@
+current directory: /home/rails/Downloads/appointment_scheduler_rails-main/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/rails/.rvm/rubies/ruby-2.6.1/bin/ruby -I /home/rails/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0 -r ./siteconf20220823-10552-1a5f3sq.rb extconf.rb
+creating Makefile
+
+current directory: /home/rails/Downloads/appointment_scheduler_rails-main/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/rails/Downloads/appointment_scheduler_rails-main/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/rails/Downloads/appointment_scheduler_rails-main/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20220823-10552-ueh5qy

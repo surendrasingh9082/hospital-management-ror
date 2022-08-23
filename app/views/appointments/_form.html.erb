@@ -1,0 +1,89 @@
+<section class="vh-100 gradient-custom " >
+  <div class="container py-5 ">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration , bg-secondary text-white" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <form>
+
+      <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4 , actions ">
+
+<%= show_errors_for(appointment) %>
+<%= form_for appointment do |f| %>
+  <p>
+    <% if appointment.patient_id %>
+      <%= f.label :patient_id, "Patient" %>
+      <%= f.hidden_field :patient_id %>
+      <%= appointment.patient.name %>
+    <% else %>
+
+      <%= f.label :patient_id, "patient" %>
+      <%= f.collection_select :patient_id, current_user.patients, :id, :name %>
+    <% end %>
+  </p>
+  <p>
+
+  <% if appointment.doctor_id %>
+    <%= f.label :doctor_id, "Doctor" %>
+    <%= f.hidden_field :doctor_id %>
+    <%= appointment.doctor.name %>
+  <% else %>
+
+    <%= f.label :doctor_id, "Doctor" %>
+    <%= f.collection_select :doctor_id, Doctor.all, :id, :name ,class:  "form-control" %>
+  <% end %>
+  </p>
+</div>
+</div>
+</div>
+
+  <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4 , actions ">
+ <p>
+    <%= f.label :location %>
+    <%= f.text_field :location ,class:  "form-control" %>
+  </p>
+        </div>
+      </div>
+</div>
+
+
+
+  <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4 , actions ">
+          <%= f.label :start_time %>
+    <%= f.datetime_field :start_time ,class:  "form-control"%>
+        </div>
+      </div>
+</div>
+
+
+  <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4 , actions ">
+      <%= f.label :end_time %>
+    <%= f.datetime_field :end_time ,class:  "form-control"%>
+        </div>
+      </div>
+</div> <br>
+
+
+<div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4 , actions ">
+          <%= f.submit "Create Appointment", :class => 'btn btn-primary' %>
+        </div>
+      </div>
+  <% end %>
+</div>
+ </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

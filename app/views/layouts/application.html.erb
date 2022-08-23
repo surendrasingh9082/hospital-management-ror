@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppointmentSchedulerRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  </head>
+
+  <body>
+    <%= render partial: 'shared/navbar' %>
+   <!--      <%= yield %> -->
+<div class="container">
+    <div class="field">
+      <div class="row">
+        <div class="col-md-4 offset-4">
+
+<center>
+          <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: name %>
+          <% end -%>
+</center>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  </body>
+</html>
